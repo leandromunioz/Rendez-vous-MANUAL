@@ -1,9 +1,8 @@
-
-
 html {
     box-sizing: border-box;
-    font-size: 62.5%; /* 1rem = 10px */
-    
+    font-size: 62.5%;
+    /* 1rem = 10px */
+
 }
 
 
@@ -14,27 +13,29 @@ html {
 }
 
 body {
-    
-    font-family: 'Marvel', sans-serif;   
-     background-color: #FFFBC9;
+
+    font-family: 'Marvel', sans-serif;
+    background-color: #FFFBC9;
     color: #000;
     margin: 0;
     padding: 0;
 }
 
-h2{
-    font-size: 2.2rem ;
+h2 {
+    font-size: 2.2rem;
     font-weight: 700;
 }
+
 /* Estilos del Header */
 .header {
+    height: 20rem;
     text-align: center;
     padding: 1rem 0;
     background-color: #FCE8BF;
 }
 
 .header__logo img {
-    max-width: 25rem; 
+    max-width: 25rem;
     height: auto;
 }
 
@@ -94,9 +95,8 @@ h2{
 
 /* Estilos del Menú Principal */
 .menu {
-
     display: flex;
-    border-left: 1px solid #000; 
+    border-left: 1px solid #000;
 }
 
 .menu__section {
@@ -105,9 +105,15 @@ h2{
 }
 
 .menu__section--left {
-    border-right: 1px solid #000;
-}
 
+    background-image: url(../img/Control\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200rem;
+    /* 100vh - altura total del header y footer */
+    flex: 1 0 auto;
+}
 
 .menu__list {
     list-style: none;
@@ -116,12 +122,13 @@ h2{
 
 .menu__item {
     margin-bottom: 1rem;
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     line-height: 1.5;
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding-right: 10rem; /* Espacio para el precio */
+    padding-right: 10rem;
+    /* Espacio para el precio */
 }
 
 a{
@@ -133,8 +140,10 @@ a{
 a:hover{
     color: rgb(97, 96, 96);
 }
+
 /* Estilos del Footer */
 .footer {
+    height: 6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -143,16 +152,18 @@ a:hover{
 }
 
 .footer__logo img {
-    max-width: 50px; 
+    max-width: 50px;
 }
 
 .footer__copyright {
-    margin: 0; /* Centrado y sin margen */
+    margin: 0;
+    /* Centrado y sin margen */
     font-size: 1rem;
 }
 
 .footer__page-number {
-    font-size: 1.4rem; /* 14px */
+    font-size: 1.4rem;
+    /* 14px */
 }
 
 /* Estilos Responsivos para Celulares y Tablets */
@@ -160,6 +171,12 @@ a:hover{
 
 
 @media screen and (max-width: 768px) {
+
+    .header {
+        height: 10rem;
+    }
+
+
     .menu {
         flex-direction: column;
         border-left: none;
@@ -167,11 +184,19 @@ a:hover{
 
     .menu__section {
         border-right: none;
-        border-bottom: 1px solid #000; /* Línea divisoria entre secciones */
+        border-bottom: 1px solid #000;
+        /* Línea divisoria entre secciones */
+    }
+
+    .menu__section--left {
+        height: calc(100vh);
+        /* 100vh - altura total del header y footer */
+
     }
 
     .menu__section:last-child {
-        border-bottom: none; /* Elimina la línea divisoria en la última sección */
+        border-bottom: none;
+        /* Elimina la línea divisoria en la última sección */
     }
 
     .header__nav {
@@ -184,26 +209,33 @@ a:hover{
         height: 1.9rem;
     }
 
-   
+
 
     .footer__logo img {
-        max-width: 5rem; /* Ajusta el tamaño del logo en el footer */
+        max-width: 5rem;
+        /* Ajusta el tamaño del logo en el footer */
     }
 
     .footer__page-number {
-        font-size: 1.2rem; /* 12px */
+        font-size: 1.2rem;
+        /* 12px */
     }
 
     .header__logo img {
         max-width: 13rem;
     }
 
-   
-   
+
+
 }
 
 
 @media screen and (max-width: 480px) {
+
+    .header {
+        height: 10rem;
+    }
+
     .header__nav {
         top: 0.5rem;
         right: 0.5rem;
@@ -215,23 +247,29 @@ a:hover{
     }
 
     .nav__flag-button {
-        margin-right: -0.2rem; 
+        margin-right: -0.2rem;
     }
 
     .flag-tooltip {
         bottom: auto;
-        top: 100%; 
+        top: 100%;
     }
 
-    
+    .menu__section--left {
+        height: calc(100vh - 20rem);
+        /* 100vh - altura total del header y footer */
+
+    }
+
+    .footer {
+        height: 5rem;
+    }
+
     .footer__page-number {
-        font-size: 1.2rem; 
+        font-size: 1.2rem;
     }
 
 
 
 
 }
-
-
-
