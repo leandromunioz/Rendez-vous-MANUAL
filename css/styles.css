@@ -58,6 +58,53 @@ h2{
     height: 2rem;
 }
 
+/* Estilos para la Barra de Navegación */
+.navbar {
+    background-color: #FCE8BF; /* Color de fondo, ajusta según tus preferencias */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.navbar__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar__list li {
+    margin: 5px 10px;
+}
+
+.navbar__list a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6rem;
+    transition: color 0.3s;
+}
+
+.navbar__list a:hover {
+    color: #FF0000;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    .navbar__list {
+        flex-direction: column;
+    }
+
+    .navbar__list li {
+        margin: 5px 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar__list a {
+        font-size: 1.4rem;
+    }
+}
 
 /* Estilos para el cuadro de texto (tooltip) */
 .flag-tooltip {
